@@ -11,7 +11,7 @@ if [! -d $VIRTUALENV ]; then
 fi
 
 if [! -f %VIRTUALENV/bin/pip]; then
-  curl --silent --show-err --retry 5 https://bootstrap.pypa.io/get-pip.py | $VIRTUALENV/
+  curl --silent --show-err --retry 5 https://bootstrap.pypa.io/get-pip.py | $VIRTUALENV/bin/python
 fi
 
 $VIRTUALENV/bin/pip install -r requirements.txt
